@@ -1,0 +1,11 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<ul>
+{% for task in tasks %}
+    <li>
+        {{ task.title }}
+        <a href="/edit/{{ task.id }}/">Edit</a>
+        <a href="/delete/{{ task.id }}/">Delete</a>
+    </li>
+{% endfor %}
+</ul>
